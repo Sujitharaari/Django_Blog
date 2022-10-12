@@ -1,0 +1,22 @@
+{% extends "theme.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+        
+                            <div class="blog-content">  
+                                <div class="pp" style="margin-top:100px;">
+                                <h1 class = "text-center" style="color: cornflowerblue;">Add A Post</h1>
+                            <div class="container w-75 text-left my-10 bg-dark">
+
+                            <form action="" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{form|crispy}}
+                            <button class="btn btn-info my-4">Post</button>
+                            </form>                
+                            
+                            
+                                </div>
+
+
+
+{% endblock content %}

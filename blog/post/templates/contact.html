@@ -1,0 +1,62 @@
+{% extends "theme.html" %}
+
+{% block content %}
+<div style="margin-top:120px;">
+        <div class="page-title lb single-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                        <h2><i class="fa fa-envelope-open-o bg-orange"></i> Contact us <small class="hidden-xs-down hidden-sm-down">-Technology Blog</small></h2>
+                    </div><!-- end col -->
+                    
+                    <div class="col-lg-4 col-md-4 col-sm-12 hidden-xs-down hidden-sm-down">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active">Contact</li>
+                        </ol>
+                    </div><!-- end col -->                    
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end page-title -->
+       
+        <section class="section wb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="page-wrapper">
+                            <div class="row">                                
+                                <div class="col-lg-5">
+                                    <h4>Welcome!</h4>
+                                    <p>It’s great to have you on the blog and fantastic you’re interested in who we are and what we do! 😃</p>
+                   
+                                    <h4>About Us</h4>
+                                    <p>Tech Blog is a technology blog, we sharing marketing, news and gadget articles.  </p>
+             
+                                    <h4>Social Networking</h4>
+                                    <p>Technology blog chiefly connect with social networking sites such as Twitter and Facebook to advertise their indexes.</p>
+                                </div>
+                                {% for c in contact %}
+                                
+                                <div class="col-lg-7">                                
+                                    <form class="form-wrapper">
+                                        <label>Your Name</label>
+                                        <input type="text" class="form-control" placeholder={{p.Your_Name}}>
+                                        <label>Email Address</label>
+                                        <input type="text" class="form-control" placeholder={{p.Email_Address}}>
+                                        <label>Phone</label>
+                                        <input type="text" class="form-control" placeholder={{p.Phone}}>
+                                        <label>Subject</label>
+                                        <input type="text" class="form-control" placeholder={{p.Subject}}>
+                                        <label>Your Message</label>
+                                        <textarea class="form-control" placeholder={{p.Your_Message}}></textarea>
+                                        <button type="send" style="margin-left:200px; margin-bottom:20px; background-color: #D8BFD8; margin-top:20px; width:120px; border-radius:10px; height:120; class=btn btn-primary" >Send<i class="fa fa-envelope-open-o"></i></button>
+                                    </form>                                
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div><!-- end page-wrapper -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section>
+{% endblock content %}

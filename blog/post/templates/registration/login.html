@@ -1,0 +1,22 @@
+{% extends "../theme.html" %}
+
+{% block content %}
+
+<body>
+<div style="margin-top:100px; margin-left:400px;">
+    <h1 style="margin-bottom:30px; margin-left:100px;">LOGIN</h1>
+    
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}        
+        <div style="margin-top:50px; margin-left:100px;">
+        <button type="Submit" style="background-color: #00cc99; border-radius: 8px;">Login</button>
+        <button type="Reset" style="background-color: #ff8080; border-radius: 8px;">Reset</button>
+        <div style="margin-top:200px;">        
+        </div>
+        </div>
+    </form>
+
+</div>
+</body>
+{% endblock content %}

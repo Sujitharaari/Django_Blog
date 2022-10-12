@@ -1,0 +1,41 @@
+{% extends "theme.html" %}
+
+{% load static %}
+
+{% block content %}
+        <section class="section">
+            <div class="container">
+                
+                <div class="row">
+                    <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                        <div class="page-wrapper">
+                            <div class="blog-top clearfix">
+                                <h4 class="pull-left" style="margin-top:100px;">Recent News <a href="#"><i class="fa fa-rss"></i></a></h4>
+                            </div><!-- end blog-top -->
+
+                                <hr class="invis">
+                                
+                                {% for p in post %}
+                                <div class="blog-box row">
+                                    <div class="col-md-4">
+                                        <div class="post-media">
+                                            <a href="tech-single.html" title="">
+                                                <img src="{{p.Image.url}}" alt="" class="img-fluid">
+                                                <div class="hovereffect"></div>
+                                            </a>
+                                        </div><!-- end media -->
+                                    </div><!-- end col -->
+                                    <div class="blog-meta big-meta col-md-8">
+                                        <h4><a href="tech-single.html" title="">{{p.Title}}</a></h4>
+                                        <p>{{p.Content}}</p>
+                                        <small class="firstsmall"><a class="bg-orange" href="tech-category-01.html" title="">Technology</a></small>
+                                        <small><a href="tech-single.html" title="">{{p.Date}}</a></small>
+                                        <small><a href="tech-author.html" title="">by Matilda</a></small>
+                                        <small><a href="tech-single.html" title=""><i class="fa fa-eye"></i> 4412</a></small>
+                                    </div><!-- end meta -->
+                                </div><!-- end blog-box -->
+                                    {% endfor %}     
+            
+        </section>
+
+        {% endblock content %}
